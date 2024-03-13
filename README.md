@@ -11,7 +11,7 @@ La función configura las opciones de la solicitud, hace la solicitud, y luego m
 La función autoIncrementalId no está definida en el código proporcionado, por lo que no puedo proporcionar una descripción de lo que hace.
 
 # TOTAL
-La constante TOTAL no está definida en el código proporcionado, por lo que no puedo proporcionar una descripción de lo que hace.
+La constante TOTAL es un array donde guardo todo los valores para totalizarlo
 
 # separadorMiles
 La función separadorMiles toma un número como argumento y devuelve una cadena con el número formateado con puntos cada tres dígitos, contando desde las unidades. Esto es útil para formatear números en la notación de miles utilizada en muchos países.

@@ -16,10 +16,12 @@ body {
 }
 
 .defaultDiv {
+  width: 100vw;
   display: flex;
   height: auto;
   justify-content: center;
   flex-direction: column;
+  overflow: hidden;
 }
 
 p {
