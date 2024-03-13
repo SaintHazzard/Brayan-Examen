@@ -1,3 +1,4 @@
+import { duckFetch } from "../../js/app.js"
 export class autenticacionApp extends HTMLElement {
   constructor() {
     super();
@@ -9,8 +10,8 @@ export class autenticacionApp extends HTMLElement {
     this.innerHTML = /*html*/ `<div class="tittle">
         <p class="text-center display-4">Tu app necesita sistema de autenticacion?</p>
       </div>
-      <div class="iconsContent justify-content-center"  data-set="2000">
-        <div class="imgIcon text-center">
+      <div class="iconsContent justify-content-center row"  >
+        <div class="imgIcon text-center" data-set="2000">
           <img src="../../img/answer-5-1.png" class="img-fluid" alt="" />
           <p class="mt-2">Si, con redes sociales y email</p>
         </div>
@@ -28,7 +29,11 @@ export class autenticacionApp extends HTMLElement {
         </div>
       </div>
     `
-
+    this.querySelectorAll('div.imgIcon').forEach((icon) => {
+      icon.addEventListener('click', () => {
+        this.innerHTML = `<total-app></total-app>`
+      })
+    })
   }
 }
 

@@ -9,7 +9,7 @@ export class monetizarApp extends HTMLElement {
     this.innerHTML = /*html*/ `<div class="tittle">
         <p class="text-center display-4">Como monetizar con tu app?</p>
       </div>
-      <div class="iconsContent justify-content-center">
+      <div class="iconsContent justify-content-center row">
         <div class="imgIcon text-center">
           <img src="../../img/answer-4-1.png" class="img-fluid" alt="" />
           <p class="mt-2">Aplicacion gratuita con publicidad</p>
