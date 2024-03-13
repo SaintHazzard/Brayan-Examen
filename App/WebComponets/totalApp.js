@@ -12,7 +12,7 @@ export class totalApp extends HTMLElement {
     this.innerHTML = /*html*/ `
     <div class="iconsContent justify-content-center flex-column text-center">
         <p>Bien! hemos terminado!</p>
-        <p>Compartenos si te ha gustado!</p>
+        <p class="compartenos">Compartenos si te ha gustado!</p>
         <div class="redes">
         <img src="" alt="" class="icon">
         <img src="" alt="" class="icon">
