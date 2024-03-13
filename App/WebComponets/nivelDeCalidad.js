@@ -1,4 +1,4 @@
-import { autoIncrementalId, duckFetch } from "../../js/app.js"
+import { autoIncrementalId, duckFetch, TOTAL } from "../../js/app.js"
 export class nivelCalidad extends HTMLElement {
   constructor() {
     super();
@@ -28,12 +28,8 @@ export class nivelCalidad extends HTMLElement {
     this.querySelectorAll('div.imgIcon').forEach((icon) => {
       icon.addEventListener('click', async () => {
         this.innerHTML = '<tipo-app></tipo-app>'
-        let id = await autoIncrementalId('priceF')
-        const newData = {
-          id,
-          precios: [icon.getAttribute('data-set')]
-        }
-        duckFetch('priceF', id, 'POST', newData)
+        TOTAL.push(Number(icon.dataset.set))
+        console.log(TOTAL);
       })
     })
   }

@@ -1,4 +1,4 @@
-import { duckFetch } from "../../js/app.js"
+import { TOTAL, duckFetch } from "../../js/app.js"
 export class tipoApp extends HTMLElement {
   constructor() {
     super();
@@ -32,7 +32,8 @@ export class tipoApp extends HTMLElement {
     this.querySelectorAll('div.imgIcon').forEach((icon) => {
       icon.addEventListener('click', () => {
         this.innerHTML = `<disenio-app></disenio-app>`
-        duckFetch('priceF', null, 'POST', [icon.getAttribute('data-set')])
+        TOTAL.push(Number(icon.dataset.set))
+        console.log(TOTAL);
       })
     })
   }

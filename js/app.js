@@ -12,7 +12,7 @@ const head = new Headers({
   "Content-Type": "application/json"
 });
 
-const TOTAL = 0;
+const TOTAL = [];
 
 async function duckFetch(endpoint, id = null, request, data) {
   const url = id ? `${URL_API}${endpoint}/${id}` : `${URL_API}${endpoint}`;
@@ -38,15 +38,21 @@ async function HTTPrequest(url, method, data = null) {
   }
 }
 
-export { duckFetch, autoIncrementalId }
+function separadorMiles(number) {
+  return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+}
+
+export { duckFetch, autoIncrementalId, TOTAL, separadorMiles }
 
 
 let valoresAdd = await duckFetch('priceF', null, "GET", null)
 console.log(valoresAdd);
 
 
-for (let i = 1; i < valoresAdd.length; i++) {
-  await duckFetch(`priceF/${i}`, null, "DELETE", null);
-}
+
+
+// for (let i = 1; i < valoresAdd.length; i++) {
+//   await duckFetch(`priceF/${1}`, null, "DELETE", valoresAdd[i]);
+// }
 
 

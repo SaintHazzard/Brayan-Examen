@@ -1,4 +1,4 @@
-import { duckFetch } from "../../js/app.js"
+import { TOTAL, duckFetch } from "../../js/app.js"
 export class autenticacionApp extends HTMLElement {
   constructor() {
     super();
@@ -32,6 +32,8 @@ export class autenticacionApp extends HTMLElement {
     this.querySelectorAll('div.imgIcon').forEach((icon) => {
       icon.addEventListener('click', () => {
         this.innerHTML = `<total-app></total-app>`
+        TOTAL.push(Number(icon.dataset.set))
+        console.log(TOTAL);
       })
     })
   }
