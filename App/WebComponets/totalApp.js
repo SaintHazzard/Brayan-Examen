@@ -5,9 +5,9 @@ export class totalApp extends HTMLElement {
     this.render()
   }
 
-  render() {
-    let totalizado = TOTAL.reduce((a, b) => a + b, 0)
-    let formatTotal = separadorMiles(totalizado)
+  async render() {
+    let totalizado = await TOTAL.reduce((a, b) => a + b, 0)
+    let formatTotal = await separadorMiles(totalizado)
     this.classList.add('justify-content-center', 'align-items-center', 'defaultDiv')
     this.innerHTML = /*html*/ `
     <div class="iconsContent justify-content-center flex-column text-center">

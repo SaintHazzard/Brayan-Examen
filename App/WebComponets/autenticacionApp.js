@@ -31,9 +31,8 @@ export class autenticacionApp extends HTMLElement {
     `
     this.querySelectorAll('div.imgIcon').forEach((icon) => {
       icon.addEventListener('click', () => {
-        this.innerHTML = `<total-app></total-app>`
         TOTAL.push(Number(icon.dataset.set))
-        console.log(TOTAL);
+        this.innerHTML = `<total-app></total-app>`
       })
     })
   }
